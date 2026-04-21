@@ -5,6 +5,7 @@ import { defineConfig } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/Pace2k26/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
