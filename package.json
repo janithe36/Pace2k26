@@ -9,8 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "cross-env CACHE_DIR=.cache/gh-pages gh-pages-clean && npm run build",
+    "deploy": "cross-env CACHE_DIR=.cache/gh-pages gh-pages -d dist -f"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -39,6 +39,7 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^10.1.0",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
